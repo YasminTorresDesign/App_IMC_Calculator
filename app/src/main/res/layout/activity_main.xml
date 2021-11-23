@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BDEDFF"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text=" IMC    CALCULADORA"
+        android:textColor="#008000"
+        android:background="#fFF"
+        android:textSize="27dp"
+        android:textStyle="bold"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:gravity="center"
+                android:text="Peso (Kg)"
+                android:textColor="#008000"
+                android:layout_margin="3dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/edtPeso"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Peso (Kg)"
+                android:background="#FFFFFF"
+                android:layout_margin="3dp"
+                android:textSize="20sp"
+                android:textColor="#157dec"
+                android:inputType="numberDecimal"
+                android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:gravity="center"
+            android:text="Estatura (m)"
+            android:textColor="#008000"
+            android:layout_margin="3dp"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edtEstatura"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="Estatura (m)"
+            android:background="#FFFFFF"
+            android:layout_margin="3dp"
+            android:textSize="20sp"
+            android:textColor="#157dec"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:id="@+id/btnGenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Genero"
+                android:textColor="#008000"
+                android:layout_margin="3dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/btnMasculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masculino"
+                android:textColor="#157dec"
+                android:layout_margin="3dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <RadioButton
+                android:id="@+id/btnFemenino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femenino"
+                android:textColor="#157dec"
+                android:layout_margin="3dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#008000"
+        android:orientation="horizontal">
+
+            <Button
+            android:id="@+id/btncalcular"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight=".8"
+            app:backgroundTint="#008000"
+            android:gravity="center"
+            android:text="CALCULAR"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"   />
+
+        <Button
+            android:id="@+id/btnBorrar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight=".8"
+            app:backgroundTint="#008000"
+            android:gravity="center"
+            android:text="Borrar"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/iconGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:backgroundTint="#008000"
+            android:src="@drawable/ic_save_white_48dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtImc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="IMC"
+        android:background="#fff"
+        android:textColor="#157dec"
+        android:layout_margin="3dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/txtBajo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Bajo Peso   menor a 18.4"
+        android:background="#95B9C7"
+        android:textColor="#157dec"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/txtNormal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Normal   18.5 - 24.9"
+        android:background="#4CC417"
+        android:textColor="#157dec"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/txtSobrepeso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Sobrepeso   25 - 29.9"
+        android:background="#FFFF00"
+        android:textColor="#157dec"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/txtObesidad1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Obesidad   I  30 - 34.9"
+        android:background="#E9AB17"
+        android:textColor="#157dec"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/txtObesidad2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Obesidad II    35 - 39.9"
+        android:background="#FF4500"
+        android:textColor="#157dec"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/txtObesidad3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Obesidad III    mas de 40"
+        android:background="#FF0000"
+        android:textColor="#157dec"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:gravity="center"
+            android:text="Categoria Peso"
+            android:textColor="#008000"
+            android:layout_margin="3dp"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txtCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:gravity="center"
+            android:hint="Clasificación"
+            android:textColor="#157dec"
+            android:background="#fff"
+            android:layout_margin="3dp"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:gravity="center"
+            android:text="  Peso Ideal    "
+            android:textColor="#008000"
+            android:layout_margin="3dp"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txtIdeal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:gravity="center"
+            android:hint="0.00 Kg-0.00 Kg"
+            android:textColor="#157dec"
+            android:background="#fff"
+            android:layout_margin="3dp"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#008000"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/iconCalculadora"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:backgroundTint="#008000"
+            android:src="@drawable/ic_calculate_white_48dp"/>
+        <ImageButton
+            android:id="@+id/iconPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:backgroundTint="#008000"
+            android:src="@drawable/ic_person_white_48dp"/>
+        <ImageButton
+            android:id="@+id/iconRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:backgroundTint="#008000"
+            android:src="@drawable/ic_list_alt_white_48dp"/>
+    </LinearLayout>
+</LinearLayout>
